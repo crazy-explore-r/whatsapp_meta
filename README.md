@@ -1,4 +1,4 @@
-## Whatsapp Meta
+## Whatsapp Meta Integration
 
 Whatsapp Buisiness integration for Frappe
 
