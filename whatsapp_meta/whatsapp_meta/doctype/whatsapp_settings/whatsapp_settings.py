@@ -5,7 +5,7 @@ import frappe
 import requests
 from frappe.model.document import Document
 
-class WhatsappCloudSettings(Document):
+class WhatsappSettings(Document):
 	pass
 
 def get_access_token():

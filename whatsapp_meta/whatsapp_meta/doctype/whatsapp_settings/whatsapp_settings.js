@@ -1,7 +1,7 @@
 // Copyright (c) 2023, Ragul KM and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Whatsapp Cloud Settings', {
+frappe.ui.form.on('Whatsapp Settings', {
 	refresh: function (frm) {
 		if (frm.doc.access_token && frm.doc.phone_number_id) {
 			frm.add_custom_button('Verify Token', () => {
