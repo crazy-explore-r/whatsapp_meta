@@ -110,6 +110,10 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
+override_doctype_class = {
+	"Notification": "whatsapp_meta.whatsapp_meta.overrides.notification.SendNotification"
+}
+
 # override_doctype_class = {
 #	"ToDo": "custom_app.overrides.CustomToDo"
 # }
@@ -117,6 +121,17 @@ app_license = "MIT"
 # Document Events
 # ---------------
 # Hook on document methods and events
+
+doc_events = {
+	"Contact": {
+		"validate": "whatsapp_meta.whatsapp_meta.docevents.contact_validate",
+	},
+	"User": {
+		"after_insert" : "whatsapp_meta.whatsapp_meta.docevents.user_after_insert"
+	}
+}
+
+fixtures = ["Property Setter"]
 
 # doc_events = {
 #	"*": {
@@ -187,6 +202,27 @@ app_license = "MIT"
 
 # User Data Protection
 # --------------------
+
+user_data_fields = [
+	{
+		"doctype": "{doctype_1}",
+		"filter_by": "{filter_by}",
+		"redact_fields": ["{field_1}", "{field_2}"],
+		"partial": 1,
+	},
+	{
+		"doctype": "{doctype_2}",
+		"filter_by": "{filter_by}",
+		"partial": 1,
+	},
+	{
+		"doctype": "{doctype_3}",
+		"strict": False,
+	},
+	{
+		"doctype": "{doctype_4}"
+	}
+]
 
 # user_data_fields = [
 #	{

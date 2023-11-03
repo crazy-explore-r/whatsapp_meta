@@ -25,7 +25,7 @@ function set_primary_action(frm) {
 
 function send_verify_message(frm, phone_number) {
 	frappe.call({
-		method: 'whatsapp_meta.whatsapp_meta.doctype.whatsapp_cloud_settings.whatsapp_cloud_settings.send_test_message',
+		method: 'whatsapp_meta.whatsapp_meta.doctype.whatsapp_settings.whatsapp_settings.send_test_message',
 		args: {
 			"phone_number": phone_number
 		},

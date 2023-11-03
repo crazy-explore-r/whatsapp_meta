@@ -1,0 +1,1 @@
+whatsapp_meta.patches.v1_0.remove_erpnext_dependency
